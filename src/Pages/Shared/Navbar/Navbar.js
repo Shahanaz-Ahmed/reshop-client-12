@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const menuItems = (
     <React.Fragment>
-      <li>
+      <li className="italic font-serif">
         <Link to="/">Home</Link>
       </li>
-      <li>
+      <li className="italic font-serif">
         <Link to="/login">Login</Link>
       </li>
     </React.Fragment>
@@ -39,7 +39,10 @@ const Navbar = () => {
             {menuItems}
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost normal-case text-xl">
+        <Link
+          to="/"
+          className="btn btn-ghost normal-case text-2xl italic font-serif"
+        >
           ReShop
         </Link>
       </div>

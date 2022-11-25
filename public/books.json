@@ -1,0 +1,80 @@
+[
+    {
+        "_id": "0282e0e58a5c404fbd15261f11c2ab1a",
+        "posted_time": "10th Jan,2022",
+        "original_price":"550",
+        "resale_price":"350",
+         "years_of_use": "2 year",
+        "category_id": "1",
+        "seller_name": "Jimmy Carter",
+        "name": "Harry Potter and the Prisoner of Azkaban",
+        "location": "146/151 Jamal Khan Rd, Chattogram",
+        "img": "https://i.pinimg.com/originals/7f/3c/fa/7f3cfa1073a5484fc6899f4c47e008fb.jpg",
+        "details": "Harry Potter and the Prisoner of Azkaban is a fantasy novel written by British author J. K. Rowling and is the third in the Harry Potter series. The book follows Harry Potter, a young wizard, in his third year at Hogwarts School of Witchcraft and Wizardry. Along with friends Ronald Weasley and Hermione Granger, Harry investigates Sirius Black, an escaped prisoner from Azkaban, the wizard prison, believed to be one of Lord Voldemort's old allies."
+      },
+    {
+        "_id": "0282e0e58a5c404fbd15261f11c2ab1b",
+        "posted_time": "10th Feb,2022",
+        "original_price":"500",
+        "resale_price":"350",
+         "years_of_use": "1.5 year",
+        "category_id": "1",
+        "seller_name": "Carter Jimmy",
+        "name": "Life of Pi",
+        "location": "146/151 Mehedibag Rd, Chattogram",
+        "img": "https://m.media-amazon.com/images/I/51rxEvLljUL._AC_SY780_.jpg",
+        "details": "Life of Pi is a Canadian philosophical novel by Yann Martel published in 2001. The protagonist is Piscine Molitor Pi Patel, an Indian boy from Pondicherry who explores issues of spirituality and metaphysics from an early age. He survives 227 days after a shipwreck while stranded on a lifeboat in the Pacific Ocean with a Bengal tiger which raises questions about the nature of reality and how it is perceived and told"
+      },
+    {
+        "_id": "0282e0e58a5c404fbd15261f11c2ab2a",
+        "posted_time": "10th March,2022",
+        "original_price":"550",
+        "resale_price":"300",
+         "years_of_use": "1.2 year",
+        "category_id": "2",
+        "seller_name": "Jane Dave",
+        "name": "Bird Box (novel)",
+        "location": "146/151 Dampara 1no lane, Chattogram",
+        "img": "https://upload.wikimedia.org/wikipedia/en/b/b9/Bird_Box_2014_book_cover.jpg",
+        "details": "Bird Box is a 2014 post-apocalyptic novel and the debut novel by American writer and singer Josh Malerman.[1] The book was first published in the United Kingdom on March 27, 2014, through Harper Voyager and in the United States on May 13, 2014, through Ecco Press. The book follows a woman who must find a way to guide herself and her children to safety despite the potential threat from an unseen adversary. The story is partially told via flashbacks and takes place during three time periods."
+      },
+    {
+        "_id": "0282e0e58a5c404fbd15261f11c2ab2b",
+        "posted_time": "10th April,2022",
+        "original_price":"250",
+        "resale_price":"180",
+         "years_of_use": "1.8 year",
+        "category_id": "2",
+        "seller_name": "Jennifer Lopez",
+        "name": "The Haunting of Hill House",
+        "location": "Kajir dewri Rd, Chattogram",
+        "img": "https://upload.wikimedia.org/wikipedia/en/0/04/HauntingOfHillHouse.JPG",
+        "details": "The Haunting of Hill House is a 1959 gothic horror novel by American author Shirley Jackson. A finalist for the National Book Award and considered one of the best literary ghost stories published during the 20th century,[1] it has been made into two feature films and a play, and is the basis of a Netflix series. Jackson's novel relies on terror rather than horror to elicit emotion in the reader, using complex relationships between the mysterious events in the house and the characters' psyches.."
+      },
+    {
+        "_id": "0282e0e58a5c404fbd15261f11c2ab3a",
+        "posted_time": "10th May,2022",
+        "original_price":"1050",
+        "resale_price":"850",
+         "years_of_use": "3 month",
+        "category_id": "3",
+        "seller_name": "Chris Evans",
+        "name": "Gone Girl",
+        "location": "146/151 Chawkbazar Rd, Chattogram",
+        "img": "https://alittleblogofbooks.files.wordpress.com/2013/09/gone-girl.jpg",
+        "details": "These are the questions Nick Dunne finds himself asking on the morning of his fifth wedding anniversary when his wife Amy suddenly disappears. The police suspect Nick. Amy's friends reveal that she was afraid of him, that she kept secrets from him. He swears it isn't true. A police examination of his computer shows strange searches. He says they weren't made by him. And then there are the persistent calls on his mobile phone."
+      },
+    {
+        "_id": "0282e0e58a5c404fbd15261f11c2ab3b",
+        "posted_time": "10th June,2022",
+        "original_price":"750",
+        "resale_price":"550",
+         "years_of_use": "6 month",
+        "category_id": "3",
+        "seller_name": "Chris Hemsworth",
+        "name": "The Silent Patient",
+        "location": "146/151 Agrabad Rd, Chattogram",
+        "img": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1535919875l/41601079._SY475_.jpg",
+        "details": "The Silent Patient is a 2019 psychological thriller novel written by British–Cypriot author Alex Michaelides. The successful debut novel was published by Celadon Books, a division of Macmillan Publishers, on 5 February 2019. The audiobook version, released on the same date, is read by Louise Brealey and Jack Hawkins.The story is narrated by an English psychotherapist, Theo Faber, dealing with a patient who turns mute after murdering her husband. Upon its release, the book debuted on The New York Times Best Seller list at No.1.[2] It later won the Goodreads Choice Award 2019 in the Mystery and Thriller category."
+      }
+]
