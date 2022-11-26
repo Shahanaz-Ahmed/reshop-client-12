@@ -19,7 +19,7 @@ const BooksCard = ({ book }) => {
           <img src={img} alt="book" />
         </figure>
         <div className="card-body mx-6">
-          <h2 className="font-bold font-serif italic text-3xl ">{name}</h2>
+          <h2 className="font-bold font-serif italic text-2xl ">{name}</h2>
           <p className="text-xl font-semibold">Location: {location}</p>
           <p className="text-xl font-semibold">Resale Price: {resale_price}</p>
           <p className="text-xl font-semibold">

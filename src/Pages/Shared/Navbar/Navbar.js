@@ -8,6 +8,9 @@ const Navbar = () => {
         <Link to="/">Home</Link>
       </li>
       <li className="italic font-serif">
+        <Link to="/blog">Blog</Link>
+      </li>
+      <li className="italic font-serif">
         <Link to="/login">Login</Link>
       </li>
     </React.Fragment>
