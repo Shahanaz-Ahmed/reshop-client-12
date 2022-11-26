@@ -1,3 +1,22 @@
+// // Import the functions you need from the SDKs you need
+// import { initializeApp } from "firebase/app";
+// // TODO: Add SDKs for Firebase products that you want to use
+// // https://firebase.google.com/docs/web/setup#available-libraries
+
+// // Your web app's Firebase configuration
+// const firebaseConfig = {
+//   apiKey: process.env.REACT_APP_apiKey,
+//   authDomain: process.env.REACT_APP_authDomain,
+//   projectId: process.env.REACT_APP_projectId,
+//   storageBucket: process.env.REACT_APP_storageBucket,
+//   messagingSenderId: process.env.REACT_APP_messagingSenderId,
+//   appId: process.env.REACT_APP_appId,
+// };
+
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// export default app;
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -5,12 +24,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_apiKey,
-  authDomain: process.env.REACT_APP_authDomain,
-  projectId: process.env.REACT_APP_projectId,
-  storageBucket: process.env.REACT_APP_storageBucket,
-  messagingSenderId: process.env.REACT_APP_messagingSenderId,
-  appId: process.env.REACT_APP_appId,
+  apiKey: "AIzaSyASLFQruTrQt5CZ-CqpyS_DR_1_n0mL8-g",
+  authDomain: "reshop-569a0.firebaseapp.com",
+  projectId: "reshop-569a0",
+  storageBucket: "reshop-569a0.appspot.com",
+  messagingSenderId: "516196490847",
+  appId: "1:516196490847:web:b31a0979d834b2e2f845ea",
 };
 
 // Initialize Firebase
