@@ -5,7 +5,7 @@ const BookCategories = () => {
   const [bookCategories, setBookCategories] = useState([]);
 
   useEffect(() => {
-    fetch("categories.json")
+    fetch("http://localhost:5000/BookCategories")
       .then((res) => res.json())
       .then((data) => setBookCategories(data));
   });
