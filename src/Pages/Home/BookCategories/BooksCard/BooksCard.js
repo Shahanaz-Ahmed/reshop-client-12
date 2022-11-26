@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import BookingModal from "../BookingModal/BookingModal";
 
-const BooksCard = ({ book }) => {
+const BooksCard = ({ book, setSelectedBook }) => {
   const {
+    _id,
     img,
     name,
-    details,
     location,
     original_price,
     posted_time,
@@ -29,7 +30,14 @@ const BooksCard = ({ book }) => {
           <p className="text-xl font-semibold">Posted time: {posted_time}</p>
           <p className="text-xl font-semibold">Seller Name: {seller_name}</p>
           <div className="card-actions justify-center mt-5">
-            <button className="btn btn-primary w-full">Book Now</button>
+            <label
+              htmlFor="booking-modal"
+              className="btn btn-primary w-full"
+              onClick={() => setSelectedBook(book)}
+            >
+              Book Now
+            </label>
+            {/* <BookingModal book={book} key={_id}></BookingModal> */}
           </div>
         </div>
       </div>

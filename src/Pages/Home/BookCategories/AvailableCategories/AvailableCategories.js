@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const AvailableCategories = ({ categories }) => {
-  const { category_id, name, details } = categories;
+  const { category_id, name } = categories;
   return (
     <div className="card bg-base-100 shadow-xl">
       <div className="card-body mt-6">
@@ -14,10 +14,7 @@ const AvailableCategories = ({ categories }) => {
         <p className="text-center text-2xl ">
           to get the book of this category,click on the name
         </p>
-        {/* <p>{details}</p> */}
-        <div className="card-actions justify-center">
-          {/* <button className="btn btn-primary">Book Now</button> */}
-        </div>
+        <div className="card-actions justify-center"></div>
       </div>
     </div>
   );
