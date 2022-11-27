@@ -1,14 +1,18 @@
-import React, { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import AvailableCategories from "./AvailableCategories/AvailableCategories";
+import Loading from "../../Shared/Loading/Loading";
 
 const BookCategories = () => {
-  const [bookCategories, setBookCategories] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:5000/BookCategories")
-      .then((res) => res.json())
-      .then((data) => setBookCategories(data));
+  const { data: bookCategories = [], isLoading } = useQuery({
+    queryKey: ["BookCategories"],
+    queryFn: () =>
+      fetch("http://localhost:5000/BookCategories").then((res) => res.json()),
   });
+
+  if (isLoading) {
+    return <Loading></Loading>;
+  }
+
   return (
     <section className="my-12">
       <p className="text-center font-bold mb-12 text-4xl italic font-serif ">

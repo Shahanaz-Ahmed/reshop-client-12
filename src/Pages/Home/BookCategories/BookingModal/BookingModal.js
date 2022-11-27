@@ -1,18 +1,9 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../../../contexts/AuthProvider";
+import toast from "react-hot-toast";
 
 const BookingModal = ({ selectedBook, setSelectedBook }) => {
-  const {
-    _id,
-    img,
-    name,
-    location,
-    original_price,
-    posted_time,
-    resale_price,
-    seller_name,
-    years_of_use,
-  } = selectedBook;
+  const { name, resale_price, img } = selectedBook;
 
   const { user } = useContext(AuthContext);
 
@@ -24,6 +15,7 @@ const BookingModal = ({ selectedBook, setSelectedBook }) => {
 
     // console.log(name, resale_price, phone, location);
     const booking = {
+      img,
       name: user.displayName,
       email: user.email,
       item_name: name,
@@ -32,7 +24,22 @@ const BookingModal = ({ selectedBook, setSelectedBook }) => {
       meeting_location: location,
     };
     console.log(booking);
-    setSelectedBook(null); //modal k close korar jonno
+
+    fetch("http://localhost:5000/bookings", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(booking),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.acknowledged) {
+          setSelectedBook(null); //modal k close korar jonno
+          toast.success("Booking Confirmed");
+        }
+      });
   };
 
   return (
@@ -53,25 +60,29 @@ const BookingModal = ({ selectedBook, setSelectedBook }) => {
           >
             <input
               type="text"
-              defaultValue={`User Name: ${user.displayName}`}
+              defaultValue={`User Name: ${user?.displayName}`}
+              disabled
               placeholder="Type here"
               className="input w-full"
             />
             <input
               type="text"
-              defaultValue={`User Email: ${user.email}`}
+              defaultValue={`User Email: ${user?.email}`}
+              disabled
               placeholder="Type here"
               className="input w-full"
             />
             <input
               type="text"
               defaultValue={`Item Name: ${name}`}
+              disabled
               placeholder="Type here"
               className="input w-full"
             />
             <input
               type="text"
               defaultValue={`Resale Price: ${resale_price}`}
+              disabled
               placeholder="Type here"
               className="input w-full"
             />

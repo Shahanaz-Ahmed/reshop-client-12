@@ -20,12 +20,12 @@ const Login = () => {
   const from = location.state?.from?.pathname || "/";
 
   const handleLogin = (data) => {
-    // console.log(data);
+    console.log(data);
     setLoginError("");
     signIn(data.email, data.password)
       .then((result) => {
         const user = result.user;
-        // console.log(user);
+        console.log(user);
         navigate(from, { replace: true });
       })
       .catch((error) => {
@@ -68,13 +68,28 @@ const Login = () => {
               <p className="text-red-600">{errors.email?.message}</p>
             )}
           </div>
+          {/* buyer seller part */}
+          <label className="label">
+            <span className="label-text">User Options</span>
+          </label>
+          <select
+            {...register("login_user")}
+            className="select select-bordered w-full"
+            name="login_user"
+            id=""
+          >
+            <option>Buyer</option>
+            <option>Seller</option>
+          </select>
+
+          {/*  */}
           <div className="form-control w-full ">
             <label className="label">
               <span className="label-text">Enter Password</span>
             </label>
 
             <input
-              type="text"
+              type="password"
               {...register("password", {
                 required: "Password is required",
                 minLength: {
@@ -92,6 +107,7 @@ const Login = () => {
               <span className="label-text">Forget Password ?</span>
             </label>
           </div>
+
           <input
             type="submit"
             className="btn btn-black w-full mt-5"
