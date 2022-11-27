@@ -5,7 +5,7 @@ import BooksCard from "../BooksCard/BooksCard";
 
 const Category = () => {
   const books = useLoaderData();
-  console.log(books);
+  // console.log(books);
   const [selectedBook, setSelectedBook] = useState(null);
   return (
     <div className="mx-6 mt-6">

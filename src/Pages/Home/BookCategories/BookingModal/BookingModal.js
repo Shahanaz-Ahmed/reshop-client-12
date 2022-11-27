@@ -14,7 +14,7 @@ const BookingModal = ({ selectedBook, setSelectedBook }) => {
     years_of_use,
   } = selectedBook;
 
-  const { user, updateUser } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
 
   const handleBooking = (event) => {
     event.preventDefault();
@@ -24,8 +24,8 @@ const BookingModal = ({ selectedBook, setSelectedBook }) => {
 
     console.log(name, resale_price, phone, location);
     const booking = {
-      //   user_name:,
-      //   user_email:,
+      name: user.displayName,
+      email: user.email,
       item_name: name,
       price: resale_price,
       phone_number: phone,
@@ -53,7 +53,7 @@ const BookingModal = ({ selectedBook, setSelectedBook }) => {
           >
             <input
               type="text"
-              defaultValue={`User Name: ${updateUser.displayName}`}
+              defaultValue={`User Name: ${user.displayName}`}
               placeholder="Type here"
               className="input w-full"
             />

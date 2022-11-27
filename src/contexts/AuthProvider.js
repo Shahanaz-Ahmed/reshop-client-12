@@ -26,7 +26,9 @@ const AuthProvider = ({ children }) => {
   };
 
   const updateUser = (userInfo) => {
+    // console.log(updateProfile(userInfo));
     return updateProfile(auth.currentUser, userInfo);
+    // return updateProfile(auth.currentUser, { userInfo });
   };
 
   const logOut = () => {
@@ -35,13 +37,13 @@ const AuthProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    const unsubsribe = onAuthStateChanged(auth, (currentuser) => {
+    const unsubscribe = onAuthStateChanged(auth, (currentuser) => {
       console.log("user obserbing");
       setUser(currentuser);
       setLoading(false);
       //   console.log(currentuser);
     });
-    return () => unsubsribe();
+    return () => unsubscribe();
   }, []);
 
   const authInfo = { createUser, signIn, user, logOut, updateUser, loading };
