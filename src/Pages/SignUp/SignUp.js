@@ -26,7 +26,7 @@ const SignUp = () => {
         const userInfo = {
           displayName: data.name,
         };
-        console.log(userInfo);
+        // console.log(userInfo);
         updateUser(userInfo)
           .then(() => {})
           .catch((error) => {

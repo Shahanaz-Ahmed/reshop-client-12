@@ -22,7 +22,7 @@ const BookingModal = ({ selectedBook, setSelectedBook }) => {
     const phone = form.phone.value;
     const location = form.location.value;
 
-    console.log(name, resale_price, phone, location);
+    // console.log(name, resale_price, phone, location);
     const booking = {
       name: user.displayName,
       email: user.email,
