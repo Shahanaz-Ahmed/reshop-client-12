@@ -37,13 +37,13 @@ const MyOrder = () => {
           </thead>
           <tbody>
             {bookings &&
-              bookings.map((booking, i) => (
+              bookings?.map((booking, i) => (
                 <tr key={booking._id}>
                   <th>{i + 1}</th>
                   <td>{booking.name}</td>
                   <td>
                     <img
-                      className="mask mask-squircle w-12 h-12"
+                      className="mask full-rounded w-12 h-12"
                       src={booking.img}
                       alt="Avatar Tailwind CSS Component"
                     />
