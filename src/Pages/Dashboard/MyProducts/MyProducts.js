@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 import ConfirmationModal from "../../Shared/ConfirmationModal/ConfirmationModal";
 import Loading from "../../Shared/Loading/Loading";
 
@@ -45,8 +46,10 @@ const MyProducts = () => {
 
   return (
     <div>
-      <h2>My Products:{addedProducts?.length}</h2>
-      <div className="overflow-x-auto">
+      <h2 className="text-center text-2xl font-serif font-bold italic mb-5">
+        My Products:{addedProducts?.length}
+      </h2>
+      <div className="overflow-x-auto grid grid-cols-1">
         <table className="table w-full">
           <thead>
             <tr>
@@ -72,9 +75,11 @@ const MyProducts = () => {
                   />
                 </td>
                 <td>
-                  <button className="btn btn-outline btn-info">
-                    Advertise
-                  </button>
+                  <Link to={`/addedProducts/${product._id}`}>
+                    <button className="btn btn-outline btn-info">
+                      Advertise
+                    </button>
+                  </Link>
                 </td>
                 <td>
                   <label

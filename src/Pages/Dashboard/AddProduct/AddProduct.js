@@ -40,9 +40,14 @@ const AddProduct = () => {
   };
   return (
     <div>
-      <h2>Add Product</h2>
-      <form onSubmit={handleSubmit(handleAddDoctor)} className="w-96">
-        <div className="form-control w-full">
+      <h2 className="text-center text-2xl font-serif font-bold italic mb-5">
+        Add Product
+      </h2>
+      <form
+        onSubmit={handleSubmit(handleAddDoctor)}
+        className="border p-7 grid grid-cols-2 gap-4 shadow"
+      >
+        <div className="form-control w-full ">
           <label className="label">
             <span className="label-text">Product Name</span>
           </label>

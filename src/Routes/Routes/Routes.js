@@ -16,6 +16,8 @@ import SignUp from "../../Pages/SignUp/SignUp";
 import AdminRoute from "../AdminRoute/AdminRoute";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import SellerRoute from "../SellerRoute/SellerRoute";
+import four0four from "../../assets/images/404.png";
+import Advertisement from "../../Pages/Home/Advertisement/Advertisement";
 
 const router = createBrowserRouter([
   {
@@ -103,7 +105,29 @@ const router = createBrowserRouter([
           </SellerRoute>
         ),
       },
+      {
+        path: "dashboard/addedProducts/:id",
+        element: <Advertisement></Advertisement>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/addedProducts/${params.id}`),
+      },
     ],
+  },
+  {
+    path: "/*",
+    element: (
+      <div className="mt-20">
+        {" "}
+        <h1 className="text-center text-5xl font-serif font-bold italic">
+          404
+        </h1>
+        <h5 className="text-center text-xl">This route does not exist</h5>
+        <div className="flex justify-center items-center">
+          {" "}
+          <img src={four0four} alt="" />
+        </div>
+      </div>
+    ),
   },
 ]);
 

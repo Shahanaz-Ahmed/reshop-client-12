@@ -37,7 +37,9 @@ const AllSeller = () => {
   };
   return (
     <div>
-      <h2>All seller</h2>
+      <h2 className="text-center text-2xl font-serif font-bold italic mb-5">
+        All seller
+      </h2>
       <div className="overflow-x-auto">
         <table className="table w-full">
           <thead>
