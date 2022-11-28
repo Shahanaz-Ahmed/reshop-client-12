@@ -27,6 +27,7 @@ const Login = () => {
   }
 
   const handleLogin = (data) => {
+    const role = data.login_user;
     console.log(data);
     setLoginError("");
     signIn(data.email, data.password)
@@ -35,7 +36,7 @@ const Login = () => {
         console.log(user);
         setLoginUserEmail(data.email);
         //new
-        saveUser(user.displayName, data.email, data.login_user);
+        saveUser(user.displayName, data.email, data.login_user, role);
       })
       .catch((error) => {
         console.error(error.message);
@@ -55,8 +56,8 @@ const Login = () => {
       });
   };
   // new
-  const saveUser = (name, email, login_user) => {
-    const user = { name, email, login_user };
+  const saveUser = (name, email, login_user, role) => {
+    const user = { name, email, login_user, role };
     fetch(`http://localhost:5000/users`, {
       method: "POST",
       headers: {
@@ -102,8 +103,8 @@ const Login = () => {
             name="login_user"
             id=""
           >
-            <option>Buyer</option>
-            <option>Seller</option>
+            <option>buyer</option>
+            <option>seller</option>
           </select>
 
           {/*  */}
