@@ -54,7 +54,6 @@ const MyProducts = () => {
               <th>Name</th>
               <th>Price</th>
               <th>Image</th>
-              <th>Sales Status</th>
               <th>Advertise</th>
               <th>Delete</th>
             </tr>
@@ -72,7 +71,6 @@ const MyProducts = () => {
                     alt=""
                   />
                 </td>
-                <td>Quality Control Specialist</td>
                 <td>
                   <button className="btn btn-outline btn-info">
                     Advertise

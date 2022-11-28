@@ -35,8 +35,8 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         setLoginUserEmail(data.email);
-        //new
         saveUser(user.displayName, data.email, data.login_user, role);
+        // navigate("/");
       })
       .catch((error) => {
         console.error(error.message);
