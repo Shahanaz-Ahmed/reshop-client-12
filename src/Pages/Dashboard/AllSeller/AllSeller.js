@@ -1,9 +1,10 @@
-import React, { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import ConfirmationModal from "../../Shared/ConfirmationModal/ConfirmationModal";
+import React, { useContext, useState } from "react";
 import toast from "react-hot-toast";
+import { AuthContext } from "../../../contexts/AuthProvider";
+import ConfirmationModal from "../../Shared/ConfirmationModal/ConfirmationModal";
 
-const AllUsers = () => {
+const AllSeller = () => {
   const [deletingUser, setDeletingUser] = useState(null);
 
   const closeModal = () => {
@@ -11,13 +12,14 @@ const AllUsers = () => {
   };
 
   const { data: users = [], refetch } = useQuery({
-    queryKey: ["users"],
+    queryKey: ["userType"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/users");
+      const res = await fetch(`http://localhost:5000/userType?role=seller`);
       const data = await res.json();
       return data;
     },
   });
+
   const handleDeleteUser = (user) => {
     fetch(`http://localhost:5000/users/${user._id}`, {
       method: "DELETE",
@@ -33,10 +35,9 @@ const AllUsers = () => {
         }
       });
   };
-
   return (
     <div>
-      <h2>All user</h2>
+      <h2>All seller</h2>
       <div className="overflow-x-auto">
         <table className="table w-full">
           <thead>
@@ -82,4 +83,4 @@ const AllUsers = () => {
   );
 };
 
-export default AllUsers;
+export default AllSeller;

@@ -14,7 +14,10 @@ const BookCategories = () => {
   }
 
   return (
-    <section className="my-12">
+    <section
+      className="my-12 shadow-md 
+    rounded-full p-24"
+    >
       <p className="text-center font-bold mb-12 text-4xl italic font-serif ">
         Book Categories
       </p>
