@@ -19,7 +19,7 @@ const MyProducts = () => {
   } = useQuery({
     queryKey: ["addedProducts"],
     queryFn: () =>
-      fetch("http://localhost:5000/addedProducts", {
+      fetch("https://reshop-server.vercel.app/addedProducts", {
         headers: {
           authorization: `bearer ${localStorage.getItem("accessToken")}`,
         },
@@ -27,7 +27,7 @@ const MyProducts = () => {
   });
 
   const handleDeleteProduct = (product) => {
-    fetch(`http://localhost:5000/addedProducts/${product._id}`, {
+    fetch(`https://reshop-server.vercel.app/addedProducts/${product._id}`, {
       method: "DELETE",
       headers: {
         authorization: `bearer ${localStorage.getItem("accessToken")}`,

@@ -6,7 +6,9 @@ const BookCategories = () => {
   const { data: bookCategories = [], isLoading } = useQuery({
     queryKey: ["BookCategories"],
     queryFn: () =>
-      fetch("http://localhost:5000/BookCategories").then((res) => res.json()),
+      fetch("https://reshop-server.vercel.app/BookCategories").then((res) =>
+        res.json()
+      ),
   });
 
   if (isLoading) {

@@ -58,7 +58,7 @@ const Login = () => {
   // new
   const saveUser = (name, email, login_user, role) => {
     const user = { name, email, login_user, role };
-    fetch(`http://localhost:5000/users`, {
+    fetch(`https://reshop-server.vercel.app/users`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

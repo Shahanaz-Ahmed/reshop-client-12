@@ -1,9 +1,7 @@
-import React, { useState } from "react";
-import BookingModal from "../BookingModal/BookingModal";
+import React from "react";
 
 const BooksCard = ({ book, setSelectedBook }) => {
   const {
-    _id,
     img,
     name,
     location,

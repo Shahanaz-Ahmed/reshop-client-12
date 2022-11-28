@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const AddProduct = () => {
   const {
@@ -23,7 +23,7 @@ const AddProduct = () => {
       img: data.img_url,
     };
 
-    fetch("http://localhost:5000/addedProducts", {
+    fetch("https://reshop-server.vercel.app/addedProducts", {
       method: "POST",
       headers: {
         "content-type": "application/json",

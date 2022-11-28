@@ -1,7 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import toast from "react-hot-toast";
-import { AuthContext } from "../../../contexts/AuthProvider";
 import ConfirmationModal from "../../Shared/ConfirmationModal/ConfirmationModal";
 
 const AllSeller = () => {
@@ -14,14 +13,16 @@ const AllSeller = () => {
   const { data: users = [], refetch } = useQuery({
     queryKey: ["userType"],
     queryFn: async () => {
-      const res = await fetch(`http://localhost:5000/userType?role=seller`);
+      const res = await fetch(
+        `https://reshop-server.vercel.app/userType?role=seller`
+      );
       const data = await res.json();
       return data;
     },
   });
 
   const handleDeleteUser = (user) => {
-    fetch(`http://localhost:5000/users/${user._id}`, {
+    fetch(`https://reshop-server.vercel.app/users/${user._id}`, {
       method: "DELETE",
       headers: {
         authorization: `bearer ${localStorage.getItem("accessToken")}`,

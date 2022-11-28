@@ -48,7 +48,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/category/${params.id}`),
+          fetch(`https://reshop-server.vercel.app/category/${params.id}`),
       },
     ],
   },
@@ -109,7 +109,7 @@ const router = createBrowserRouter([
         path: "dashboard/addedProducts/:id",
         element: <Advertisement></Advertisement>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/addedProducts/${params.id}`),
+          fetch(`https://reshop-server.vercel.app/addedProducts/${params.id}`),
       },
     ],
   },
