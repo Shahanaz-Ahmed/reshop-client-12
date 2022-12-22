@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <div className="hero bg-base-200">
+    <div className="hero bg-base-200 mb-5">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="lg:w-1/2 md:1/2 h-[500px] rounded-lg shadow-2xl">
           <img

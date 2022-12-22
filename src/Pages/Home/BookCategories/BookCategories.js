@@ -18,7 +18,7 @@ const BookCategories = () => {
   return (
     <section
       className="my-12 shadow-md 
-    rounded-full p-24"
+    rounded-full lg:p-24 md:p-24 p-16 bg-gray-200"
     >
       <p className="text-center font-bold mb-12 text-4xl italic font-serif ">
         Book Categories
